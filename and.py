@@ -1,6 +1,11 @@
 from utils.model import Perceptron
 from utils.all_utils import prepare_data, save_model
 import pandas as pd
+import logging
+
+
+logging_str = "[ %(asctime)s - %(levelname)s - %(module)s - %(message)s] %"
+logging.basicConfig(level=logging.INFO, format=logging_str)
 
 
 def main(data, eta, epochs, filename):
